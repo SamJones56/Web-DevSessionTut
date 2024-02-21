@@ -4,7 +4,7 @@ if (isset($_POST['submit'])) {
     try {
         require_once '../src/DBconnect.php';
         $new_user = array(
-            "name" => escape($_POST['name']),
+            "username" => escape($_POST['name']),
             "password" => escape($_POST['password'])
         );
         $sql = sprintf(
@@ -22,8 +22,8 @@ if (isset($_POST['submit'])) {
 
 
 if (isset($_POST['submit']) && $statement){
-    echo $new_user['name']. ' successfully added';
-    header("location:index.php");
+    echo $new_user['username']. ' successfully added';
+//    header("location:index.php");
 }
 ?>
 

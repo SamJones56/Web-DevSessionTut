@@ -7,7 +7,7 @@ $Password = "pass";
 
 $host = "localhost";
 $username = "root";
-$password = "";
+$password = "root";
 $dbname = "sessiontutorial"; // will use later
 $dsn = "mysql:host=$host;dbname=$dbname"; // will use later
 $options = array(
