@@ -45,8 +45,6 @@ session_start();
             <?php
             $_SESSION['Username'] = "Guest";
             $_SESSION['Active'] = true;
-            //            header("location:index.php");
-
             ?>
             window.location.href = 'index.php';
         }
