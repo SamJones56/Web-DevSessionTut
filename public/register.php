@@ -15,15 +15,17 @@ if (isset($_POST['submit'])) {
         );
         $statement = $connection->prepare($sql);
         $statement->execute($new_user);
-    } catch(PDOException $error) {
+    } catch (PDOException $error) {
         echo $sql . "<br>" . $error->getMessage();
     }
 }
 
 
-if (isset($_POST['submit']) && $statement){
-    echo $new_user['username']. ' successfully added';
-//    header("location:index.php");
+if (isset($_POST['submit']) && $statement) {
+    echo $new_user['username'] . ' successfully added';
+    $_SESSION['Username'] = $new_user['username'];
+    $_SESSION['Active'] = true;
+    header("location:index.php");
 }
 ?>
 

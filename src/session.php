@@ -1,6 +1,14 @@
 <?php
+
 class session
 {
+    public function forgetSession()
+    {
+        $this->killSession();
+        header("location:login.php"); /* Redirect to login page */
+        exit;
+    }
+
     public function killSession()
     {
         //overwrite the current session array with an empty array.
@@ -16,11 +24,6 @@ class session
         }
         session_destroy();
     }
-    public function forgetSession()
-    {
-        $this->killSession();
-        header("location:login.php"); /* Redirect to login page */
-        exit;
-    }
 }
+
 ?>
